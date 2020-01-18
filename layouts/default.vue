@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+    <!-- TODO Break this out into its own comp (needs store) -->
     <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed app>
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
@@ -12,10 +13,11 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- TODO Break this out into its own comp (needs store) -->
     <v-app-bar :clipped-left="clipped" fixed app >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>
-        <nuxt-link to="/shelly-cms" class="toolbar-title">{{title}}</nuxt-link>
+        <nuxt-link to="/shellyCms" class="toolbar-title">{{title}}</nuxt-link>
       </v-toolbar-title>
       <v-spacer />
     </v-app-bar>
@@ -36,7 +38,7 @@ export default {
     return {
       clipped: true, // this toggles the header to be on top of side menu
       drawer: false,
-      fixed: false, // not sure what this does
+      fixed: false, // does something with footer
       items: [
         {
           icon: 'panorama',
