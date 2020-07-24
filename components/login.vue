@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  export default {
+export default {
     props: {
       source: String,
     },
@@ -43,7 +43,12 @@
     methods: {
       login() {
         console.log("login clicked");
+        this.$store.commit('login/login');
       }
     }
   }
 </script>
+
+<style>
+
+</style>
