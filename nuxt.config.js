@@ -44,11 +44,12 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-  ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
+    ],
+    /*
+    //
+      ** Axios module configuration
+      ** See https://axios.nuxtjs.org/options
+    */
   axios: {
   },
   /*
